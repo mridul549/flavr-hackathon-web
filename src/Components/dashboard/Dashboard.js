@@ -6,6 +6,9 @@ import '../../css/dashboard/dashboard.css'
 
 import SidebarContext from "../../context/sidebar/sidebarContext";
 import Menu from "./Menu/Menu";
+import ErrorPage from "../ErrorPage";
+import EditCategory from "./Menu/EditCategory";
+import OrderHistory from "./Order/OrderHistory";
 
 
 export default function Dashboard() {
@@ -21,6 +24,10 @@ export default function Dashboard() {
                     <Routes>
                         <Route path="/" element={<Menu />} />
                         <Route path="/menu" element={<Menu />} />
+                        <Route path="/editcategory/:id" element={<EditCategory />} />
+                        <Route path="/addcategory" element={<EditCategory />} />
+                        <Route path="/orders/history" element={<OrderHistory />} />
+                        <Route path='*' element={<ErrorPage />}></Route>
                     </Routes>
                 </div>
             </div>

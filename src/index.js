@@ -14,6 +14,9 @@ import Dashboard from './Components/dashboard/Dashboard';
 import Category from './Components/dashboard/Menu/Category';
 import EditCategory from './Components/dashboard/Menu/EditCategory';
 import ErrorPage from './Components/ErrorPage';
+import OrderState from './context/orders/orderState';
+import OrderHistory from './Components/dashboard/Order/OrderHistory';
+import OrderItem from './Components/dashboard/Order/OrderItem';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,10 @@ const router = createBrowserRouter([
 {
     path: "/login",
     element: <Login />,
+},
+{
+  path: "/orderitem",
+  element: <OrderItem />
 },
 {
     path: "/otp",
@@ -55,22 +62,31 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <ErrorPage />
-    },
+      },
+      {
+        path:"orders/history",
+        element:<OrderHistory/>
+      },
   ]
 },
-
+{
+  path: "*",
+  element: <ErrorPage />
+},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SidebarState>
+    <OrderState>
+          <SidebarState>
             <CategoryState>
               <AuthState>
                 <RouterProvider router={router} />
               </AuthState>
             </CategoryState>
           </SidebarState>
+        </OrderState>
   </React.StrictMode>
 );
 

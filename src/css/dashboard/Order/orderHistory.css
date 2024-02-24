@@ -1,0 +1,26 @@
+.selectDown {
+    width: 4.5rem;
+    background-color: transparent;
+    height: 2.5rem;
+    border: 0.5px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.selectDown:focus, .selectDown:active {
+    border-color: #004932;
+}
+
+.select-items {
+    border: none;
+}
+
+.containerCards {
+    columns: 3;
+    column-gap: 10px;
+}
+
+.box {
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
