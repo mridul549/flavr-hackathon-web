@@ -8,6 +8,9 @@ import Signup from './Components/auth/Signup';
 import Login from './Components/auth/Login';
 import Otp from './Components/auth/Otp';
 import SidebarState from './context/sidebar/sidebarState'
+import Menu from './Components/dashboard/Menu/Menu'
+import CategoryState from './context/category/categoryState';
+import Dashboard from './Components/dashboard/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -26,18 +29,30 @@ const router = createBrowserRouter([
     path: "/otp",
     element: <Otp />,
 },
+{
+  path: '/dashboard',
+  element: <Dashboard />,
+  children:[
+      {
+          path:"menu",
+          element:<Menu/>
+      },
+      
+  ]
+},
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <SidebarState>
-            
+            <CategoryState>
               <AuthState>
                 <RouterProvider router={router} />
               </AuthState>
-            
-      </SidebarState>
+            </CategoryState>
+          </SidebarState>
   </React.StrictMode>
 );
 
