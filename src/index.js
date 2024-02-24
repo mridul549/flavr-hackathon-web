@@ -12,6 +12,8 @@ import Menu from './Components/dashboard/Menu/Menu'
 import CategoryState from './context/category/categoryState';
 import Dashboard from './Components/dashboard/Dashboard';
 import Category from './Components/dashboard/Menu/Category';
+import EditCategory from './Components/dashboard/Menu/EditCategory';
+import ErrorPage from './Components/ErrorPage';
 
 const router = createBrowserRouter([
   {
@@ -42,7 +44,18 @@ const router = createBrowserRouter([
           path:"menu",
           element:<Menu/>
       },
-      
+      {
+        path: "editcategory/:id",
+        element: <EditCategory />
+      },
+      {
+        path: "addcategory",
+        element: <EditCategory />
+      },
+      {
+        path: "*",
+        element: <ErrorPage />
+    },
   ]
 },
 
