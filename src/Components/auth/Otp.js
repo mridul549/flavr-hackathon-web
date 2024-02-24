@@ -3,7 +3,7 @@ import { MuiOtpInput } from "mui-one-time-password-input";
 import '../../css/auth/otp.css'
 import AuthContext from "../../context/auth/authContext";
 import { useNavigate } from "react-router-dom";
-import Spinner from "./Spinner";
+import Spinner from "../Spinner";
 
 
 const Otp = (props) => {
