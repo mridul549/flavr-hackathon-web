@@ -7,6 +7,7 @@ import AuthState from './context/auth/authState';
 import Signup from './Components/auth/Signup';
 import Login from './Components/auth/Login';
 import Otp from './Components/auth/Otp';
+import SidebarState from './context/sidebar/sidebarState'
 
 const router = createBrowserRouter([
   {
@@ -30,9 +31,13 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AuthState>
+    <SidebarState>
+            
+              <AuthState>
                 <RouterProvider router={router} />
               </AuthState>
+            
+      </SidebarState>
   </React.StrictMode>
 );
 
