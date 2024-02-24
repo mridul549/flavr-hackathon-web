@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AuthState from './context/auth/authState';
+import Signup from './Components/auth/Signup';
+import Login from './Components/auth/Login';
+import Otp from './Components/auth/Otp';
 
 const router = createBrowserRouter([
   {

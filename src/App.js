@@ -1,5 +1,9 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './Components/Home/Home';
+import Signup from './Components/auth/Signup';
+import Login from './Components/auth/Login';
+import Otp from './Components/auth/Otp';
+
 
 function App() {
   return (
