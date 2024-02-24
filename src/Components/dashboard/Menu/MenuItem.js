@@ -15,7 +15,7 @@ export default function MenuItem(props) {
     const checkedToggle = async (e, productid) => {
         setIsChecked(!isChecked)
         toast.promise(
-            fetch("https://flavr.tech/products/instock", {
+            fetch("http://51.20.54.146/products/instock", {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

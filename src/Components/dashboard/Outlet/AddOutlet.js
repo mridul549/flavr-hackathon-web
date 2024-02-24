@@ -8,7 +8,7 @@ export default function AddOutlet() {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("https://flavr.tech/owner/getOutlets", {
+            const response = await fetch("http://51.20.54.146/owner/getOutlets", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

@@ -28,7 +28,7 @@ export default function SignIn() {
         event.preventDefault()
 
         toast.promise(
-            fetch(`https://flavr.tech/mail/passwordreset`, {
+            fetch(`http://51.20.54.146/mail/passwordreset`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -77,7 +77,7 @@ export default function SignIn() {
     const afterVerify = () => {
         setVerificationModal(false)
         toast.promise(
-            fetch(`https://flavr.tech/owner/verifyowner`, {
+            fetch(`http://51.20.54.146/owner/verifyowner`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
@@ -108,7 +108,7 @@ export default function SignIn() {
 
     const sendOTP = async () => {
         toast.promise(
-            fetch(`https://flavr.tech/mail/resendotp`, {
+            fetch(`http://51.20.54.146/mail/resendotp`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -147,7 +147,7 @@ export default function SignIn() {
             return;
         }
         setLoading(true);
-        const response = await fetch("https://flavr.tech/owner/login", {
+        const response = await fetch("http://51.20.54.146/owner/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -159,7 +159,7 @@ export default function SignIn() {
         if(json.message==="Auth successful"){
             // save token and redirect to dashboard
             localStorage.setItem('token', json.token)
-            const userProfile = await fetch(`https://flavr.tech/owner/ownerprofile?ownermail=${credentials.email}`, {
+            const userProfile = await fetch(`http://51.20.54.146/owner/ownerprofile?ownermail=${credentials.email}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -194,7 +194,7 @@ export default function SignIn() {
     const handleGoogleAuth = async (res) => {
         const decodedToken = jwt_decode(res.credential)
 
-        const response = await fetch("https://flavr.tech/owner/googleAuth", {
+        const response = await fetch("http://51.20.54.146/owner/googleAuth", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
