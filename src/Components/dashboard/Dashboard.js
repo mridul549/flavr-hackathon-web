@@ -11,6 +11,7 @@ import EditCategory from "./Menu/EditCategory";
 import OrderHistory from "./Order/OrderHistory";
 import Orders from "./Order/Orders";
 import Profile from "../Profile";
+import Outletdetails from "./Outlet/Outletdetails";
 
 
 export default function Dashboard() {
@@ -31,6 +32,8 @@ export default function Dashboard() {
                         <Route path="/addcategory" element={<EditCategory />} />
                         <Route path="/orders/history" element={<OrderHistory />} />
                         <Route path="/profile" element={<Profile />} />
+                        <Route path="/outlet/edit" element={<Outletdetails/>} />
+                        <Route path="/outletdetails" element={<Outletdetails/>}/>
                         <Route path='*' element={<ErrorPage />}></Route>
                     </Routes>
                 </div>

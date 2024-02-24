@@ -19,6 +19,8 @@ import OrderHistory from './Components/dashboard/Order/OrderHistory';
 import OrderItem from './Components/dashboard/Order/OrderItem';
 import Orders from './Components/dashboard/Order/Orders';
 import Profile from './Components/Profile';
+import Outletdetails from './Components/dashboard/Outlet/Outletdetails';
+import OutletState from './context/outlet/outletState';
 
 const router = createBrowserRouter([
   {
@@ -76,7 +78,15 @@ const router = createBrowserRouter([
       {
         path:"orders/handling",
         element:<Orders/>
-    },
+      },
+      {
+        path:"outletdetails",
+        element:<Outletdetails/>
+      },
+      {
+        path:"outlet/edit",
+        element:<Outletdetails/>
+      }
   ]
 },
 {
@@ -88,7 +98,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <OrderState>
+    <OutletState>
+        <OrderState>
           <SidebarState>
             <CategoryState>
               <AuthState>
@@ -97,6 +108,7 @@ root.render(
             </CategoryState>
           </SidebarState>
         </OrderState>
+      </OutletState>
   </React.StrictMode>
 );
 
