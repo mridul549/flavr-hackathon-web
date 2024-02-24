@@ -11,6 +11,7 @@ import SidebarState from './context/sidebar/sidebarState'
 import Menu from './Components/dashboard/Menu/Menu'
 import CategoryState from './context/category/categoryState';
 import Dashboard from './Components/dashboard/Dashboard';
+import Category from './Components/dashboard/Menu/Category';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
 {
     path: "/otp",
     element: <Otp />,
+},
+{
+  path: "/category",
+  element: <Category />
 },
 {
   path: '/dashboard',

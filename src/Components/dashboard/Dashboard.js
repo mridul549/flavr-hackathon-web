@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import '../../css/dashboard/dashboard.css'
 
 import SidebarContext from "../../context/sidebar/sidebarContext";
+import Menu from "./Menu/Menu";
 
 
 export default function Dashboard() {
@@ -16,7 +17,12 @@ export default function Dashboard() {
                 <div className="col-lg-2 sidebar">
                     <Sidebar />
                 </div>
-                
+                <div className={`col-lg-10 container-fluid div-2 ${sidebarOpen ? 'sidebaropen' : 'sidebarclose'}`}>
+                    <Routes>
+                        <Route path="/" element={<Menu />} />
+                        <Route path="/menu" element={<Menu />} />
+                    </Routes>
+                </div>
             </div>
         </div>
     );

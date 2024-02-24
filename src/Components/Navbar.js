@@ -1,6 +1,6 @@
 import { React, useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import AddOutlet from "./AddOutlet";
+import AddOutlet from "./dashboard/Outlet/AddOutlet";
 import "../css/navbar.css";
 import SidebarContext from "../context/sidebar/sidebarContext";
 
