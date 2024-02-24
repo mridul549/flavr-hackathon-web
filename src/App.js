@@ -5,6 +5,7 @@ import Login from './Components/auth/Login';
 import Otp from './Components/auth/Otp';
 import Dashboard from './Components/dashboard/Dashboard';
 import ErrorPage from './Components/ErrorPage';
+import OrderItem from './Components/dashboard/Order/OrderItem';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/otp' element={<Otp />}/>
             <Route path='/dashboard/*' element={<Dashboard />} />
+            <Route path='/orderitem' element={<OrderItem/>} />
             <Route path='*' element={<ErrorPage />}></Route>
       </Routes>
     </div>

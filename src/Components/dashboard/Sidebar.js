@@ -55,7 +55,6 @@ export default function Sidebar() {
                         {sidebarOpen && 
                             <div className="collapse mb-3" id="collapseExample">
                                 <ul>
-                                    <li className="dropdown-item-list"><Link className="dropdown-item" to="/dashboard/orders/allorders">All Orders</Link></li>
                                     <li className="dropdown-item-list"><Link className="dropdown-item" to="/dashboard/orders/handling">Order Handling</Link></li>
                                     <li className="dropdown-item-list"><Link className="dropdown-item" to="/dashboard/orders/history">Order history</Link></li>
                                 </ul>
