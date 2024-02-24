@@ -20,7 +20,7 @@ export default function Profile() {
     const resetPassword = () => {
         console.log(passResetForm.oldPass + " " + passResetForm.newPass);
         toast.promise(
-            fetch(`https://flavr.tech/owner/resetpassword`, {
+            fetch(`http://51.20.54.146/owner/resetpassword`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
@@ -91,7 +91,7 @@ export default function Profile() {
         setOtpFor('profile')
 
         toast.promise(
-            fetch(`https://flavr.tech/mail/resendotp`, {
+            fetch(`http://51.20.54.146/mail/resendotp`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -124,7 +124,7 @@ export default function Profile() {
 
     const handleProfileFormWithoutCheck = async () => {
         toast.promise(
-            fetch("https://flavr.tech/owner/updateowner/", {
+            fetch("http://51.20.54.146/owner/updateowner/", {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
@@ -162,7 +162,7 @@ export default function Profile() {
     const handleProfileFormWithCheck = async () => {
         if(ownerForm.email!==beforeEditOwner.email) {
             toast.promise(
-                fetch(`https://flavr.tech/owner/ownerprofile?ownermail=${ownerForm.email}`, {
+                fetch(`http://51.20.54.146/owner/ownerprofile?ownermail=${ownerForm.email}`, {
                     method: "GET",
                 }).then((response) => response.json()),
                 {
@@ -201,7 +201,7 @@ export default function Profile() {
         imageForm.append('newOwnerImage', image)
         
         toast.promise(
-            fetch("https://flavr.tech/owner/updateImage/", {
+            fetch("http://51.20.54.146/owner/updateImage/", {
                 method: "PATCH",
                 headers: {
                     "Authorization": "Bearer " + localStorage.getItem("token")
