@@ -17,6 +17,7 @@ import ErrorPage from './Components/ErrorPage';
 import OrderState from './context/orders/orderState';
 import OrderHistory from './Components/dashboard/Order/OrderHistory';
 import OrderItem from './Components/dashboard/Order/OrderItem';
+import Orders from './Components/dashboard/Order/Orders';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
         path:"orders/history",
         element:<OrderHistory/>
       },
+      {
+        path:"orders/handling",
+        element:<Orders/>
+    },
   ]
 },
 {

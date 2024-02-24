@@ -178,7 +178,7 @@ export default function OrderHistory() {
 
                     <div className="containerCards mt-3">
                         {filter.data.length===0 ?
-                            <div className="d-flex justify-content-center" style={{marginTop: '30vh'}}>
+                            <div className="text-end" style={{marginTop: '30vh', width:'80vh'}}>
                                 <p>No orders for this date</p> 
                             </div> :
                             filter.data.map((item) => {

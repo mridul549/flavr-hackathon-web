@@ -9,6 +9,7 @@ import Menu from "./Menu/Menu";
 import ErrorPage from "../ErrorPage";
 import EditCategory from "./Menu/EditCategory";
 import OrderHistory from "./Order/OrderHistory";
+import Orders from "./Order/Orders";
 
 
 export default function Dashboard() {
@@ -25,6 +26,7 @@ export default function Dashboard() {
                         <Route path="/" element={<Menu />} />
                         <Route path="/menu" element={<Menu />} />
                         <Route path="/editcategory/:id" element={<EditCategory />} />
+                        <Route path="/orders/handling" element={<Orders />} />
                         <Route path="/addcategory" element={<EditCategory />} />
                         <Route path="/orders/history" element={<OrderHistory />} />
                         <Route path='*' element={<ErrorPage />}></Route>
